@@ -29,13 +29,13 @@
     </ul>
     <ul class="user-navigation">
       <li class="user-search">
-        <button class="user-search" aria-label="Открыть поиск по сайту">
+        <a href="#" class="user-search" aria-label="Открыть поиск по сайту">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
                viewBox="0 0 17 17">
             <path fill="#fff"
                   d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
           </svg>
-        </button>
+        </a>
         <div class="search-form">
           <form action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="search-form">Поиск по сайту</label>
@@ -64,7 +64,7 @@
               <label class="visually-hidden" for="login-password">Пароль</label>
               <input type="password" name="password" id="login-password" placeholder="Пароль">
             </p>
-            <button class="site-button" type="submit" value="Войти">Войти</button>
+            <button class="gllacy-button" type="submit" value="Войти">Войти</button>
           </form>
           <div class="reg-link">
             <a href="#">Забыли пароль?</a>
@@ -178,33 +178,57 @@
       </fieldset>
       <fieldset>
         <legend>Цена: 100 руб. – 500 руб.</legend>
-        <input type="range" name="price" min="100" max="500" step="10" value="100">
+        <input type="text" name="min-price" value="100" hidden>
+        <input type="text" name="max-price" value="500" hidden>
+        <div class="double-range">
+          <button type="button" class="range-button" aria-label="Устанавливает минимальную стоимость"></button>
+          <button type="button" class="range-button" aria-label="Устанавливает максимальную стоимость"></button>
+          <div class="range-fill"></div>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Жирность</legend>
-        <input id="zero" name="fat" type="radio" value="0">
-        <label for="zero">0%</label>
-        <input id="ten" name="fat" type="radio" value="0-10">
-        <label for="ten">до 10%</label>
-        <input id="thirty" name="fat" type="radio" value="10-30">
-        <label for="thirty">до 30%</label>
-        <input id="more-thirty" name="fat" type="radio" value="more 30">
-        <label for="more-thirty">выше 30%</label>
+        <label>
+          <input name="fat" type="radio" value="0">
+          0%
+        </label>
+        <label>
+          <input name="fat" type="radio" value="0-10">
+          до 10%
+        </label>
+        <label>
+          <input name="fat" type="radio" value="10-30">
+          до 30%
+        </label>
+        <label>
+          <input name="fat" type="radio" value="more 30">
+          выше 30%
+        </label>
       </fieldset>
       <fieldset>
         <legend>Наполнители:</legend>
-        <input id="filler-choco" name="filler" type="checkbox" value="choco">
-        <label for="filler-choco">шоколадные</label>
-        <input id="filler-sugar" name="filler" type="checkbox" value="sugar">
-        <label for="filler-sugar">сахарные присыпки</label>
-        <input id="filler-fruit" name="filler" type="checkbox" value="fruit">
-        <label for="filler-fruit">фрукты</label>
-        <input id="filler-syrup" name="filler" type="checkbox" value="syrup">
-        <label for="filler-syrup">сиропы</label>
-        <input id="filler-jam" name="filler" type="checkbox" value="jam">
-        <label for="filler-jam">джемы</label>
+        <label>
+          <input name="filler" type="checkbox" value="chocolate">
+          шоколадные
+        </label>
+        <label>
+          <input name="filler" type="checkbox" value="sugar">
+          сахарные присыпки
+        </label>
+        <label>
+          <input name="filler" type="checkbox" value="fruit">
+          фрукты
+        </label>
+        <label>
+          <input name="filler" type="checkbox" value="syrup">
+          сиропы
+        </label>
+        <label>
+          <input name="filler" type="checkbox" value="jam">
+          джемы
+        </label>
       </fieldset>
-      <button class="site-button" type="submit">Применить</button>
+      <button class="filter-button" type="submit">Применить</button>
     </form>
   </section>
 
@@ -213,73 +237,73 @@
     <ul class="catalog-list">
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-1.png" width="267" height="267" alt="Мороженое 1">
-        <p><b>310</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>310</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-2.png" width="267" height="267" alt="Мороженое 2">
-        <p><b>380</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>380</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-3.png" width="267" height="267" alt="Мороженое 3">
-        <p><b>355</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>355</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-4.png" width="267" height="267" alt="Мороженое 4">
-        <p><b>415</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>415</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-5.png" width="267" height="267" alt="Мороженое 5">
-        <p><b>325</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>325</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочное с брусничным джемом</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-6.png" width="267" height="267" alt="Мороженое 6">
-        <p><b>410</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>410</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-7.png" width="267" height="267" alt="Мороженое 7">
-        <p><b>375</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>375</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-8.png" width="267" height="267" alt="Мороженое 8">
-        <p><b>320</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>320</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочное с шоколадной стружкой</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-9.png" width="267" height="267" alt="Мороженое 9">
-        <p><b>440</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>440</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-10.png" width="267" height="267" alt="Мороженое 10">
-        <p><b>435</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>435</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочноe с ментоловым сиропом</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-11.png" width="267" height="267" alt="Мороженое 11">
-        <p><b>355</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>355</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочное с кусочками черного шоколада</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-12.png" width="267" height="267" alt="Мороженое 12">
-        <p><b>420</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>420</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочное с мятным сиропом</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>

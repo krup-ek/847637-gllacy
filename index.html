@@ -29,13 +29,13 @@
     </ul>
     <ul class="user-navigation">
       <li class="user-search">
-        <button class="user-search" aria-label="Открыть поиск по сайту">
+        <a href="#" class="user-search" aria-label="Открыть поиск по сайту">
           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
                viewBox="0 0 17 17">
             <path fill="#fff"
                   d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
           </svg>
-        </button>
+        </a>
         <div class="search-form">
           <form action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="search-form">Поиск по сайту</label>
@@ -64,7 +64,7 @@
               <label class="visually-hidden" for="login-password">Пароль</label>
               <input type="password" name="password" id="login-password" placeholder="Пароль">
             </p>
-            <button class="site-button" type="submit" value="Войти">Войти</button>
+            <button class="gllacy-button" type="submit" value="Войти">Войти</button>
           </form>
           <div class="reg-link">
             <a href="#">Забыли пароль?</a>
@@ -99,21 +99,21 @@
     <ul>
       <li class="active">
         <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-        <a href="#" class="slider-button">Давайте оба!</a>
+        <a href="#" class="gllacy-button">Давайте оба!</a>
       </li>
       <li>
         <h3>Шоколадный пломбир и лимонный сорбет</h3>
-        <a href="#" class="slider-button">Давайте оба!</a>
+        <a href="#" class="gllacy-button">Давайте оба!</a>
       </li>
       <li>
         <h3>Пломбир с помадкой и клубничный щербет</h3>
-        <a href="#" class="slider-button">Давайте оба!</a>
+        <a href="#" class="gllacy-button">Давайте оба!</a>
       </li>
     </ul>
     <div class="slider-controls">
-      <input type="radio" class="visually-hidden" name="slider-toggle" id="slide-1" aria-label="Крем-брюле и пломбир с малиновым джемом" checked>
-      <input type="radio" class="visually-hidden" name="slider-toggle" id="slide-2" aria-label="Шоколадный пломбир и лимонный сорбет">
-      <input type="radio" class="visually-hidden" name="slider-toggle" id="slide-3" aria-label="Пломбир с помадкой и клубничный щербет">
+      <button type="button" class="slider-switch" id="slide-1" aria-label="Крем-брюле и пломбир  с малиновым джемом"></button>
+      <button type="button" class="slider-switch" id="slide-2" aria-label="Шоколадный пломбир  и лимонный сорбет"></button>
+      <button type="button" class="slider-switch" id="slide-3" aria-label="Пломбир с помадкой  и клубничный щербет"></button>
     </div>
   </section>
 
@@ -141,27 +141,27 @@
       <li class="catalog-list-item catalog-item-hit">
         <img src="img/catalog-items/item-1.png" width="267" height="267"
              alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-        <p><b>310</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>310</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item catalog-item-hit">
         <img src="img/catalog-items/item-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-        <p><b>380</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>380</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item catalog-item-hit">
         <img src="img/catalog-items/item-3.png" width="267" height="267"
              alt="Сливочно-клубничное с присыпкой из белого шоколада">
-        <p><b>355</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>355</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
       <li class="catalog-list-item catalog-item-hit">
         <img src="img/catalog-items/item-4.png" width="267" height="267"
              alt="Сливочное крем-брюле с карамельной подливкой">
-        <p><b>415</b><span class="rub-icon">рубль</span><span>кг</span></p>
+        <p><b>415</b><span class="visually-hidden">рубль</span><span>кг</span></p>
         <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
         <a href="#" class="gllacy-button">Быстрый просмотр</a>
       </li>
@@ -203,10 +203,10 @@
       <h2 class="visually-hidden">Рассылка</h2>
       <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит.
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <form class="form-feedback" action="index.html" method="post">
+      <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="feedback-email">Электронная почта</label>
         <input type="email" id="feedback-email" placeholder="Электронная почта">
-        <button class="site-button" type="submit">Отправить</button>
+        <button class="gllacy-button" type="submit">Отправить</button>
       </form>
     </div>
   </div>
@@ -214,7 +214,7 @@
   <section class="contact">
     <h2 class="visually-hidden">Контакты</h2>
 
-    <img src="img/map.jpg" alt="Карта" height="430" width="900" class="map-static">
+    <img src="img/map.jpg" alt="Карта" height="430" width="1200" class="map-static">
     <div class="map-interactive"></div>
 
     <section class="box-contact">
@@ -227,7 +227,7 @@
         <a class="big" href="tel:88124502525">8 812 450-25-25</a><br>
         (с 10 до 20 ежедневно)
       </p>
-      <button type="submit" class="site-button">Форма обратной связи</button>
+      <a href="#" class="gllacy-button">Форма обратной связи</a>
     </section>
   </section>
 
@@ -319,7 +319,7 @@
       <label class="visually-hidden" for="callback-comments">Напишите что-нибудь</label>
       <textarea name="comments" rows="10" id="callback-comments" placeholder="Напишите что-нибудь..."></textarea>
     </p>
-    <button class="site-button" type="submit">Отправить</button>
+    <button class="gllacy-button" type="submit">Отправить</button>
   </form>
   <button class="modal-close" type="button">Закрыть</button>
 </section>
