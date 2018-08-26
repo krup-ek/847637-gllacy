@@ -28,7 +28,13 @@ a {
 }
 
 a.gllacy-link {
+  font: inherit;
   color: #ffffff;
+}
+
+a.gllacy-link > span {
+  font: inherit;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 a.gllacy-link:hover,
@@ -36,14 +42,23 @@ a.gllacy-link:active {
   color: #ffbc9e;
 }
 
+a.gllacy-link.on-white-bg,
+a.gllacy-link.on-white-bg:hover,
+a.gllacy-link.on-white-bg:active{
+  color: #323232;
+}
+
+a.gllacy-link.on-white-bg > span {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
 /*Кнопки*/
 .gllacy-button {
   display: inline-block;
   color: #ffffff;
   font-weight: 700;
-  height: 46px;
-  line-height: 46px;
-  padding: 0 20px;
+  font-size: 18px;
+  padding: 15px 25px;
   background: linear-gradient(#F26843, #E74A35);
   border: none;
   border-radius: 20px;
@@ -67,22 +82,33 @@ a.gllacy-link:active {
   list-style: none;
 }
 
-.site-navigation > li > a {
+a.menu-item {
   color: #ffffff;
-  text-decoration: underline;
+}
+
+a.menu-item span {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+a.menu-item:hover,
+a.menu-item:active {
+  color: #323232;
+  background-color: #ffffff;
+}
+
+.popup {
+  border-radius: 5px;
+  background-color: #F8F7F4;
+  display: inline-block;
+  /*width: a;*/
+  /*height: 174px;*/
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .dropdown-menu {
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
-
-  border-radius: 5px;
-  background-color: #F8F7F4;
-  width: 146px;
-  height: 174px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
-
 }
 
 .dropdown-menu a {
@@ -99,7 +125,7 @@ ul.dropdown-menu {
 
 a.catalog-menu {
   display: block;
-  padding-left: 23px;
+  padding: 0 23px;
 }
 
 .dropdown-menu .catalog-menu:hover {
@@ -112,6 +138,7 @@ a.catalog-menu {
 
 .dropdown-menu .catalog-menu.active {
   background-color: #d07058;
+  color: #ffffff;
 }
 
 .user-navigation {
@@ -120,11 +147,8 @@ a.catalog-menu {
   list-style: none;
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus,
 .user-navigation a:not(.gllacy-button):hover,
 .user-navigation a:not(.gllacy-button):focus {
-  background-color: #ffffff;
   color: #323232;
 }
 
@@ -145,7 +169,7 @@ a.catalog-menu {
 }
 
 hr {
-  width: 128px;
+  width: calc(100% - 18px);
   border-right: none;
   border-left: none;
 }
@@ -168,7 +192,6 @@ hr {
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
-  text-decoration: underline;
 }
 
 .main-navigation > p.nav-time {
@@ -178,7 +201,7 @@ hr {
   line-height: 16px;
 }
 
-.main-navigation > a.phone-number {
+.main-navigation > .phone-number {
   color: #ffffff;
   font-weight: 700;
   font-size: 22px;
@@ -218,8 +241,8 @@ hr {
 
 .slider-switch {
   border-radius: 50%;
-  height: 24px;
-  width: 24px;
+  height: 22px;
+  width: 22px;
   background: transparent;
   border: 2px solid #ffffff;
 }
@@ -249,7 +272,8 @@ hr {
 .promo li {
   list-style: none;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  background-position: center center;
 }
 
 .promo-raspberries {
@@ -266,23 +290,22 @@ hr {
   list-style: none;
 }
 
-.catalog a:not(.gllacy-button) {
+.catalog .gllacy-link {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
-  text-decoration: underline;
 }
 
 .catalog b,
-.catalog span {
+.catalog i {
+  font-style: normal;
   font-weight: 700;
   font-size: 45px;
   line-height: 45px;
-
   text-shadow: 0.5px 0.9px 3px rgba(49, 50, 53, 0.5);
 }
 
-.catalog span {
+.catalog i {
   font-size: 30px;
 }
 
@@ -314,9 +337,8 @@ hr {
 /*Наши преимущества*/
 
 .features {
+  background-color: #EFE4CE;
   background-image: url("../img/waffle-big.jpg");
-  background-repeat: no-repeat;
-
   color: #323232;
   font-weight: 400;
   font-size: 16px;
@@ -352,19 +374,19 @@ hr {
   height: 49px;
 }
 
-.feature-icon.icon-1::before {
+.feature-icon.icon-ice-cream::before {
   background-image: url("../img/ice-cream.svg");
 }
 
-.feature-icon.icon-2::before {
+.feature-icon.icon-eco::before {
   background-image: url("../img/eco.svg");
 }
 
-.feature-icon.icon-3::before {
+.feature-icon.icon-cow::before {
   background-image: url("../img/cow.svg");
 }
 
-.feature-icon.icon-4::before {
+.feature-icon.icon-thermometer::before {
   background-image: url("../img/thermometer.svg");
 }
 
@@ -386,15 +408,12 @@ hr {
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
-  color: #323232;
-  text-decoration: underline;
 }
 
 .news-dispatch {
-  background-color: #F8F7F4;
   background-repeat: no-repeat;
-  border-image: url("../img/bg-post.svg");
-
+  background-image: repeating-linear-gradient( -45deg, #ffffff, #ffffff 7px, #92cdff 7px, #92cdff 14px, #ffffff 14px, #ffffff 21px, #fe9e90 21px, #fe9e90 28px );
+  background-color: #F8F7F4;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
@@ -404,8 +423,7 @@ hr {
 /*Контакты*/
 
 .contact {
-  background-color: #FFFFFF;
-
+  background-color: #F7F1D9;
   color: #323232;
 }
 
@@ -445,11 +463,9 @@ hr {
 
 .footer-menu li {
   list-style: none;
-
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
-  text-decoration: underline;
 }
 
 .with-heart {
@@ -474,11 +490,6 @@ hr {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-}
-
-.footer-copyright > .button {
-  color: #ffffff;
-  text-decoration: underline;
 }
 
 /*Форма обратной связи*/
@@ -512,27 +523,19 @@ hr {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  text-decoration: underline;
 }
 
-.breadcrumbs li.active {
-  text-decoration: none;
-}
 
 /*Корзина*/
 
-li table {
-  background-color: #f8f7f4;
-  width: 540px;
-  border-radius: 5px;
-  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, .4);
+.orders-list {
   color: #323232;
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
 }
 
-tfoot .orders-total {
+.orders-foot .orders-total {
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
@@ -550,6 +553,8 @@ tfoot .orders-total {
   line-height: 16px;
 }
 
+
+
 .filter .filter-items,
 .filter-button {
   background-color: #9db1a5;
@@ -559,7 +564,8 @@ tfoot .orders-total {
   color: #ffffff;
 }
 
-.filter-button:hover {
+.filter-button:hover,
+select.filter-items:hover {
   background-color: #fbfcfb;
   color: #000000;
 }
@@ -570,14 +576,17 @@ tfoot .orders-total {
 
 /*Карточка товара*/
 
-.catalog li {
+.catalog-list-item {
   width: 296px;
 }
 
-.catalog li:hover {
+.catalog-list-item:hover {
   background-color: #9bafa3;
 }
 
+.catalog-list-item img {
+  border-radius: 50%;
+}
 /*Пагинация*/
 
 .pagination a {
