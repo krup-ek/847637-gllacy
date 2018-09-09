@@ -12,7 +12,7 @@
 <body>
 
 <header class="main-header">
-  <nav class="main-navigation">
+  <nav class="main-navigation container">
     <a class="main-header-logo">
       <img src="img/logo.svg" width="154" height="64" alt="Логотип Глейси">
     </a>
@@ -101,10 +101,10 @@
   </nav>
 </header>
 
-<main class="container">
+<main>
   <h1 class="visually-hidden">Магазин Глейси</h1>
 
-  <section class="slider">
+  <section class="slider container">
     <h2 class="visually-hidden">Горячие предложения</h2>
     <ul>
       <li class="active">
@@ -130,7 +130,7 @@
     </div>
   </section>
 
-  <section class="promo">
+  <section class="promo container">
     <h2 class="visually-hidden">Промоакции</h2>
     <ul class="promo-list">
       <li class="promo-raspberries">
@@ -148,7 +148,7 @@
     </ul>
   </section>
 
-  <section class="catalog">
+  <section class="catalog container">
     <h2 class="visually-hidden">Популярные сорта мороженого</h2>
     <ul class="catalog-list">
       <li class="catalog-list-item catalog-item-hit">
@@ -156,32 +156,32 @@
              alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
         <p><b>310</b><span class="visually-hidden">рубль</span><i>/кг</i></p>
         <h3><a class="gllacy-link" href="#"><span>Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a></h3>
-        <a href="#" class="gllacy-button">Быстрый просмотр</a>
+        <div class="button-wrapper"><a href="#" class="gllacy-button">Быстрый просмотр</a></div>
       </li>
       <li class="catalog-list-item catalog-item-hit">
         <img src="img/catalog-items/item-2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
         <p><b>380</b><span class="visually-hidden">рубль</span><i>/кг</i></p>
         <h3><a class="gllacy-link" href="#"><span>Сливочно-кофейное с кусочками шоколада</span></a></h3>
-        <a href="#" class="gllacy-button">Быстрый просмотр</a>
+        <div class="button-wrapper"><a href="#" class="gllacy-button">Быстрый просмотр</a></div>
       </li>
       <li class="catalog-list-item catalog-item-hit">
         <img src="img/catalog-items/item-3.png" width="267" height="267"
              alt="Сливочно-клубничное с присыпкой из белого шоколада">
         <p><b>355</b><span class="visually-hidden">рубль</span><i>/кг</i></p>
         <h3><a class="gllacy-link" href="#"><span>Сливочно-клубничное с присыпкой из белого шоколада</span></a></h3>
-        <a href="#" class="gllacy-button">Быстрый просмотр</a>
+        <div class="button-wrapper"><a href="#" class="gllacy-button">Быстрый просмотр</a></div>
       </li>
       <li class="catalog-list-item catalog-item-hit">
         <img src="img/catalog-items/item-4.png" width="267" height="267"
              alt="Сливочное крем-брюле с карамельной подливкой">
         <p><b>415</b><span class="visually-hidden">рубль</span><i>/кг</i></p>
         <h3><a class="gllacy-link" href="#"><span>Сливочное крем-брюле с карамельной подливкой</span></a></h3>
-        <a href="#" class="gllacy-button">Быстрый просмотр</a>
+        <div class="button-wrapper"><a href="#" class="gllacy-button">Быстрый просмотр</a></div>
       </li>
     </ul>
   </section>
 
-  <section class="features">
+  <section class="features container">
     <h2 class="visually-hidden">Наши преимущества</h2>
 
     <p class="features-title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного
@@ -210,11 +210,11 @@
     </ul>
   </section>
 
-  <div class="news">
+  <div class="news container">
     <article class="news-item">
       <h2 class="visually-hidden">Статья «Способы сервировки»</h2>
       <p>Новое в нашем блоге</p>
-      <a class="gllacy-link on-white-bg" href="#"><span>10 способов сервировки фруктовых щербетов к столу</span></a>
+      <a class="gllacy-link with-underline on-white-bg" href="#">10 способов сервировки фруктовых щербетов к столу</a>
     </article>
     <div class="news-dispatch">
       <h2 class="visually-hidden">Рассылка</h2>
@@ -235,23 +235,25 @@
     <img src="img/map.jpg" alt="Карта" height="430" width="1200" class="map-static">
     <div class="map-interactive"></div>
 
-    <section class="box-contact">
-      <h2 class="visually-hidden">Адрес и телефон</h2>
+    <div class="contact-wrapper container">
+      <section class="box-contact">
+        <h2 class="visually-hidden">Адрес и телефон</h2>
 
-      <p class="address">Адрес главного офиса<br/>и офлайн-магазина:</p>
-      <p class="big-address">ул. Большая Конюшенная<br/>19/8, Санкт-Петербург</p>
-      <p class="order">Для заказов по телефону:</p>
-      <a class="big-phone" href="tel:88124502525">8 812 450-25-25</a>
-      <p class="work-time">
-        (с 10 до 20 ежедневно)
-      </p>
-      <a href="#" class="gllacy-button">Форма обратной связи</a>
-    </section>
+        <p class="address">Адрес главного офиса<br/>и офлайн-магазина:</p>
+        <p class="big-address">ул. Большая Конюшенная<br/>19/8, Санкт-Петербург</p>
+        <p class="order">Для заказов по телефону:</p>
+        <a class="big-phone" href="tel:88124502525">8 812 450-25-25</a>
+        <p class="work-time">
+          (с 10 до 20 ежедневно)
+        </p>
+        <a href="#" class="gllacy-button">Форма обратной связи</a>
+      </section>
+    </div>
   </section>
 
 </main>
 
-<footer class="main-footer">
+<footer class="main-footer container">
   <div class="footer-social">
     <ul class="social-networks">
       <li>
