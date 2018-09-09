@@ -17,8 +17,8 @@
       <img src="img/logo.svg" width="154" height="64" alt="Логотип Глейси">
     </a>
     <ul class="site-navigation">
-      <li class="hover-popup active">
-        <a class="menu-item" href="catalog.html"><span>Каталог</span></a>
+      <li class="hover-popup">
+        <a class="menu-item active" href="catalog.html"><span>Каталог</span></a>
         <ul class="dropdown-menu popup">
           <li><a class="catalog-menu new-products" href="#">Новинки</a></li>
           <li class="separator"><li>
@@ -76,8 +76,8 @@
           </div>
         </div>
       </li>
-      <li class="hover-popup">
-        <a href="#" class="user-navigation-button" aria-label="Корзина">
+      <li class="hover-popup open">
+        <a href="#" class="user-navigation-button basket-active" aria-label="Корзина">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
             <g fill="#FFF">
               <path class="hover-black"
@@ -146,7 +146,7 @@
             </td>
           </tr>
           <tr>
-            <td colspan="5">
+            <td colspan="5" class="order-button">
               <a class="gllacy-button" href="#">Оформить заказ</a>
             </td>
           </tr>
@@ -197,47 +197,40 @@
       <fieldset>
         <legend>Жирность</legend>
         <div class="filter-items">
-        <label>
-          <input name="fat" type="radio" value="0">
-          0%
-        </label>
-        <label>
-          <input name="fat" type="radio" value="0-10">
-          до 10%
-        </label>
-        <label>
-          <input name="fat" type="radio" value="10-30">
-          до 30%
-        </label>
-        <label>
-          <input name="fat" type="radio" value="more 30">
-          выше 30%
-        </label>
+
+        <input class="gllacy-radio" id="fat-0" name="fat" type="radio" value="0">
+        <label for="fat-0">0%</label>
+
+        <input class="gllacy-radio" id="fat-0-10" name="fat" type="radio" value="0-10">
+        <label for="fat-0-10">до 10%</label>
+
+        <input class="gllacy-radio" id="fat-10-30" name="fat" type="radio" value="10-30">
+        <label for="fat-10-30">до 30%</label>
+
+        <input class="gllacy-radio" id="fat-30" name="fat" type="radio" value="more 30">
+        <label for="fat-30">выше 30%</label>
+
         </div>
       </fieldset>
       <fieldset>
         <legend>Наполнители:</legend>
         <div class="filter-items">
-        <label>
-          <input name="filler" type="checkbox" value="chocolate">
-          шоколадные
-        </label>
-        <label>
-          <input name="filler" type="checkbox" value="sugar">
-          сахарные присыпки
-        </label>
-        <label>
-          <input name="filler" type="checkbox" value="fruit">
-          фрукты
-        </label>
-        <label>
-          <input name="filler" type="checkbox" value="syrup">
-          сиропы
-        </label>
-        <label>
-          <input name="filler" type="checkbox" value="jam">
-          джемы
-        </label>
+
+        <input class="gllacy-checkbox" id="filter-chocolate" name="filler" type="checkbox" value="chocolate">
+        <label for="filter-chocolate">шоколадные</label>
+
+        <input class="gllacy-checkbox" id="filter-sugar" name="filler" type="checkbox" value="sugar">
+        <label for="filter-sugar">сахарные присыпки</label>
+
+        <input class="gllacy-checkbox" id="filter-fruit" name="filler" type="checkbox" value="fruit">
+        <label for="filter-fruit">фрукты</label>
+
+        <input class="gllacy-checkbox" id="filter-syrup" name="filler" type="checkbox" value="syrup">
+        <label for="filter-syrup">сиропы</label>
+
+        <input class="gllacy-checkbox" id="filter-jam" name="filler" type="checkbox" value="jam">
+        <label for="filter-jam">джемы</label>
+
         </div>
       </fieldset>
       <button class="filter-button" type="submit">Применить</button>
