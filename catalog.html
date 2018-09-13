@@ -21,7 +21,8 @@
         <a class="menu-item active" href="catalog.html"><span>Каталог</span></a>
         <ul class="dropdown-menu popup">
           <li><a class="catalog-menu new-products" href="#">Новинки</a></li>
-          <li class="separator"><li>
+          <li class="separator">
+          <li>
           <li><a class="catalog-menu active" href="catalog.html">Сливочное</a></li>
           <li><a class="catalog-menu" href="#">Щербеты</a></li>
           <li><a class="catalog-menu" href="#">Фруктовый лед</a></li>
@@ -43,7 +44,8 @@
         <div class="search-form popup">
           <form action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="search-form">Поиск по сайту</label>
-            <input class="gllacy-input popup-input" type="search" name="search" id="search-form" placeholder="Что ищем?">
+            <input class="gllacy-input popup-input" type="search" name="search" id="search-form"
+                   placeholder="Что ищем?">
           </form>
         </div>
       </li>
@@ -53,7 +55,8 @@
                viewBox="0 0 21 19">
             <g fill="#fff">
               <path class="hover-black" d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
-              <path class="hover-black" d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
+              <path class="hover-black"
+                    d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
             </g>
           </svg>
           <span>Вход</span>
@@ -62,11 +65,13 @@
           <form action="https://echo.htmlacademy.ru" method="post">
             <div>
               <label class="visually-hidden" for="login-email">Электронная почта</label>
-              <input class="gllacy-input popup-input" type="email" name="email" id="login-email" placeholder="Электронная почта">
+              <input class="gllacy-input popup-input" type="email" name="email" id="login-email"
+                     placeholder="Электронная почта">
             </div>
             <div>
               <label class="visually-hidden" for="login-password">Пароль</label>
-              <input class="gllacy-input popup-input" type="password" name="password" id="login-password" placeholder="Пароль">
+              <input class="gllacy-input popup-input" type="password" name="password" id="login-password"
+                     placeholder="Пароль">
             </div>
             <button class="gllacy-button" type="submit" value="Войти">Войти</button>
           </form>
@@ -76,14 +81,19 @@
           </div>
         </div>
       </li>
-      <li class="hover-popup open">
+      <li class="hover-popup">
         <a href="#" class="user-navigation-button basket-active" aria-label="Корзина">
           <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
             <g fill="#FFF">
-              <path class="hover-black"
-                d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/>
-              <circle class="hover-black" cx="6.984" cy="18" r="2"/>
-              <circle class="hover-black" cx="15.984" cy="18" r="2"/>
+              <g>
+                <polygon class="hover-red" fill="transparent" fill-rule="nonzero"
+                         points="5.888 4.031 6.922 13 17.372 13 18.548 4.031"></polygon>
+                <circle class="hover-black" fill="#fff" fill-rule="nonzero" cx="6.984" cy="18" r="2"></circle>
+                <circle class="hover-black" fill="#fff" fill-rule="nonzero" cx="15.984" cy="18" r="2"></circle>
+                <path class="hover-black"
+                      d="M5.657,2.031 L5.422,0 L0,0 L0,2 L3.64,2 L5.14,15 L19.128,15 L20.827,2.031 L5.657,2.031 Z M17.372,13 L6.922,13 L5.888,4.031 L18.548,4.031 L17.372,13 Z"
+                      fill="#fff" fill-rule="nonzero"></path>
+              </g>
             </g>
           </svg>
           <span>2 товара</span>
@@ -189,8 +199,10 @@
         <input type="text" name="max-price" value="500" hidden>
         <div class="double-range filter-items">
           <div class="range-fill">
-            <button type="button" class="range-button" style="left: 20%;" aria-label="Устанавливает минимальную стоимость"></button>
-            <button type="button" class="range-button" style="left: 60%;" aria-label="Устанавливает максимальную стоимость"></button>
+            <button type="button" class="range-button" style="left: 20%;"
+                    aria-label="Устанавливает минимальную стоимость"></button>
+            <button type="button" class="range-button" style="left: 60%;"
+                    aria-label="Устанавливает максимальную стоимость"></button>
           </div>
         </div>
       </fieldset>
@@ -198,17 +210,17 @@
         <legend>Жирность</legend>
         <div class="filter-items">
 
-        <input class="gllacy-radio" id="fat-0" name="fat" type="radio" value="0">
-        <label for="fat-0">0%</label>
+          <input class="gllacy-radio" id="fat-0" name="fat" type="radio" value="0">
+          <label for="fat-0">0%</label>
 
-        <input class="gllacy-radio" id="fat-0-10" name="fat" type="radio" value="0-10">
-        <label for="fat-0-10">до 10%</label>
+          <input class="gllacy-radio" id="fat-0-10" name="fat" type="radio" value="0-10">
+          <label for="fat-0-10">до 10%</label>
 
-        <input class="gllacy-radio" id="fat-10-30" name="fat" type="radio" value="10-30">
-        <label for="fat-10-30">до 30%</label>
+          <input class="gllacy-radio" id="fat-10-30" name="fat" type="radio" value="10-30">
+          <label for="fat-10-30">до 30%</label>
 
-        <input class="gllacy-radio" id="fat-30" name="fat" type="radio" value="more 30">
-        <label for="fat-30">выше 30%</label>
+          <input class="gllacy-radio" id="fat-30" name="fat" type="radio" value="more 30">
+          <label for="fat-30">выше 30%</label>
 
         </div>
       </fieldset>
@@ -216,20 +228,20 @@
         <legend>Наполнители:</legend>
         <div class="filter-items">
 
-        <input class="gllacy-checkbox" id="filter-chocolate" name="filler" type="checkbox" value="chocolate">
-        <label for="filter-chocolate">шоколадные</label>
+          <input class="gllacy-checkbox" id="filter-chocolate" name="filler" type="checkbox" value="chocolate">
+          <label for="filter-chocolate">шоколадные</label>
 
-        <input class="gllacy-checkbox" id="filter-sugar" name="filler" type="checkbox" value="sugar">
-        <label for="filter-sugar">сахарные присыпки</label>
+          <input class="gllacy-checkbox" id="filter-sugar" name="filler" type="checkbox" value="sugar">
+          <label for="filter-sugar">сахарные присыпки</label>
 
-        <input class="gllacy-checkbox" id="filter-fruit" name="filler" type="checkbox" value="fruit">
-        <label for="filter-fruit">фрукты</label>
+          <input class="gllacy-checkbox" id="filter-fruit" name="filler" type="checkbox" value="fruit">
+          <label for="filter-fruit">фрукты</label>
 
-        <input class="gllacy-checkbox" id="filter-syrup" name="filler" type="checkbox" value="syrup">
-        <label for="filter-syrup">сиропы</label>
+          <input class="gllacy-checkbox" id="filter-syrup" name="filler" type="checkbox" value="syrup">
+          <label for="filter-syrup">сиропы</label>
 
-        <input class="gllacy-checkbox" id="filter-jam" name="filler" type="checkbox" value="jam">
-        <label for="filter-jam">джемы</label>
+          <input class="gllacy-checkbox" id="filter-jam" name="filler" type="checkbox" value="jam">
+          <label for="filter-jam">джемы</label>
 
         </div>
       </fieldset>
@@ -238,7 +250,7 @@
   </section>
 
   <section class="catalog container">
-    <h2>Каталог</h2>
+    <h2 class="visually-hidden">Каталог</h2>
     <ul class="catalog-list">
       <li class="catalog-list-item">
         <img src="img/catalog-items/item-1.png" width="267" height="267" alt="Мороженое 1">
@@ -326,6 +338,8 @@
     <a href="#" class="next"><span class="visually-hidden">Следующие страницы</span></a>
   </section>
 
+  <div class="horizontal-line container"></div>
+
 </main>
 
 <footer class="main-footer container">
@@ -394,7 +408,8 @@
       <img src="img/logo-htmlacademy.svg" width="109" height="38" alt="Логотип HTML Academy">
     </a>
     <p class="footer-copyright">
-      Сделано <a class="gllacy-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"><span>HTML Academy</span></a> © 2017
+      Сделано <a class="gllacy-link" href="https://htmlacademy.ru/intensive/htmlcss"
+                 target="_blank"><span>HTML Academy</span></a> © 2017
     </p>
   </div>
 </footer>
