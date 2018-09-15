@@ -9,6 +9,8 @@
   <link href="css/styles.css" rel="stylesheet">
 </head>
 
+<!--<body style="background: url('img/test-index.jpg');-->
+     <!--background-repeat: no-repeat; background-position: center top;">-->
 <body>
 
 <header class="main-header">
@@ -107,25 +109,25 @@
   <section class="slider container">
     <h2 class="visually-hidden">Горячие предложения</h2>
     <ul>
-      <li class="active">
+      <li class="slider-item active" id="slide-1">
         <h3>Крем-брюле и пломбир с малиновым джемом</h3>
         <a href="#" class="gllacy-button">Давайте оба!</a>
       </li>
-      <li>
+      <li class="slider-item" id="slide-2">
         <h3>Шоколадный пломбир и лимонный сорбет</h3>
         <a href="#" class="gllacy-button">Давайте оба!</a>
       </li>
-      <li>
+      <li class="slider-item" id="slide-3">
         <h3>Пломбир с помадкой и клубничный щербет</h3>
         <a href="#" class="gllacy-button">Давайте оба!</a>
       </li>
     </ul>
     <div class="slider-controls">
-      <button type="button" class="slider-switch active" id="slide-1"
+      <button type="button" class="slider-switch active" data-slide="slide-1" data-color="849D8F"
               aria-label="Крем-брюле и пломбир  с малиновым джемом"></button>
-      <button type="button" class="slider-switch" id="slide-2"
+      <button type="button" class="slider-switch" data-slide="slide-2" data-color="8996A6"
               aria-label="Шоколадный пломбир  и лимонный сорбет"></button>
-      <button type="button" class="slider-switch" id="slide-3"
+      <button type="button" class="slider-switch" data-slide="slide-3" data-color="9D8B84"
               aria-label="Пломбир с помадкой  и клубничный щербет"></button>
     </div>
   </section>
@@ -222,7 +224,7 @@
         Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
       <form class="form-feedback" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="feedback-email">Электронная почта</label>
-        <input class="gllacy-input" class="input-email gllacy-input" type="email" id="feedback-email"
+        <input class="input-email gllacy-input" type="email" id="feedback-email"
                placeholder="Электронная почта">
         <button class="gllacy-button" type="submit">Отправить</button>
       </form>
@@ -233,7 +235,7 @@
     <h2 class="visually-hidden">Контакты</h2>
 
     <img src="img/map.jpg" alt="Карта" height="430" width="1200" class="map-static">
-    <div class="map-interactive"></div>
+    <div class="map-interactive" id="map-interactive"></div>
 
     <div class="contact-wrapper container">
       <section class="box-contact">
@@ -246,7 +248,7 @@
         <p class="work-time">
           (с 10 до 20 ежедневно)
         </p>
-        <a href="#" class="gllacy-button">Форма обратной связи</a>
+        <a href="#" id="feedback-button" class="gllacy-button">Форма обратной связи</a>
       </section>
     </div>
   </section>
@@ -319,13 +321,13 @@
       <img src="img/logo-htmlacademy.svg" width="109" height="38" alt="Логотип HTML Academy">
     </a>
     <p class="footer-copyright">
-      Сделано <a class="gllacy-link" href="https://htmlacademy.ru/intensive/htmlcss"
+      Сделано в <a class="gllacy-link" href="https://htmlacademy.ru/intensive/htmlcss"
                  target="_blank"><span>HTML Academy</span></a> © 2017
     </p>
   </div>
 </footer>
 
-<div class="modal-overlay" hidden>
+<div class="modal-overlay" id="feedback-window">
   <section class="modal modal-login popup">
     <h2>Мы обязательно вам ответим!</h2>
     <form action="https://echo.htmlacademy.ru" method="post">
@@ -338,9 +340,11 @@
                 placeholder="Напишите что-нибудь..."></textarea>
       <button class="gllacy-button" type="submit">Отправить</button>
     </form>
-    <button class="modal-close" type="button" aria-label="Закрыть форму"></button>
+    <button class="modal-close" id="feedback-close" type="button" aria-label="Закрыть форму"></button>
   </section>
 </div>
-</body>
 
+<script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU" type="text/javascript"></script>
+<script src="js/index.js"></script>
+</body>
 </html>
