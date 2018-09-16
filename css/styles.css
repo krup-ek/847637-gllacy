@@ -27,34 +27,35 @@ a {
   text-decoration: none;
 }
 
-a.gllacy-link {
+.gllacy-link {
   font: inherit;
   color: #ffffff;
 }
 
-a.gllacy-link > span {
+.gllacy-link > span {
   font: inherit;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-a.gllacy-link:hover,
-a.gllacy-link:active {
+.gllacy-link:hover,
+.gllacy-link:active {
   color: #ffbc9e;
 }
 
-a.gllacy-link.on-white-bg,
-a.gllacy-link.on-white-bg:hover,
-a.gllacy-link.on-white-bg:active {
+.gllacy-link.on-white-bg,
+.gllacy-link.on-white-bg:hover,
+.gllacy-link.on-white-bg:active {
   color: #323232;
 }
 
-a.gllacy-link.on-white-bg > span {
+.gllacy-link.on-white-bg > span {
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
 }
 
 /*Кнопки*/
 .gllacy-button {
   display: inline-block;
+  vertical-align: top;
   color: #ffffff;
   font-weight: 700;
   font-size: 18px;
@@ -206,21 +207,21 @@ a.gllacy-link.on-white-bg > span {
   display: block;
 }
 
-a.menu-item {
+.menu-item {
   color: #ffffff;
 }
 
-a.menu-item span {
+.menu-item span {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.hover-popup:hover a.menu-item,
-a.menu-item:hover {
+.hover-popup:hover .menu-item,
+.menu-item:hover {
   color: #323232;
   background-color: #ffffff;
 }
 
-a.menu-item:active {
+.menu-item:active {
   color: #323232;
   background-color: #ffffff;
   box-shadow: 0 2px 1px inset rgba(0, 0, 0, 0.8);
@@ -254,7 +255,7 @@ ul.dropdown-menu {
   padding-left: 0;
 }
 
-a.catalog-menu {
+.catalog-menu {
   display: block;
   padding: 0 23px;
 }
@@ -421,8 +422,6 @@ a.catalog-menu {
 .new-products {
   font-weight: 700;
 }
-
-
 
 .reg-link {
   position: absolute;
@@ -745,9 +744,10 @@ a.catalog-menu {
 .catalog-list-item b::after {
   content: "";
   display: inline-block;
+  vertical-align: top;
   height: 34px;
   width: 33px;
-  margin-left: 5px;
+  margin-left: 1px;
   background-image: url("../img/ruble.svg");
   background-size: cover;
   filter: drop-shadow(0 2px 1px rgba(50, 50, 50, 0.5));
@@ -780,8 +780,8 @@ a.catalog-menu {
   padding: 22px 20px;
   box-sizing: border-box;
   border-radius: 15px;
-  margin-top: 2px;
-  margin-bottom: 30px;
+  margin-top: -15px;
+  margin-bottom: 43px;
 }
 
 .features-title {
@@ -956,6 +956,7 @@ a.catalog-menu {
   position: relative;
   top: -860px;
 }
+
 .map-interactive {
   position: relative;
   top: -430px;
@@ -1037,6 +1038,7 @@ a.catalog-menu {
 .footer-menu {
   margin-top: 12px;
 }
+
 .social-networks {
   margin: 0;
   padding-left: 0;
@@ -1044,6 +1046,7 @@ a.catalog-menu {
 
 .social-networks li {
   display: inline-block;
+  vertical-align: top;
   float: left;
   margin-right: 12px;
 }
@@ -1054,6 +1057,7 @@ a.catalog-menu {
 
 .footer-menu ul {
   display: inline-block;
+  vertical-align: top;
   padding-left: 0;
   margin: 0 15px
 }
@@ -1132,7 +1136,6 @@ a.catalog-menu {
   }
 }
 
-
 .modal-overlay {
   display: none;
   position: fixed;
@@ -1150,7 +1153,8 @@ a.catalog-menu {
 .modal-overlay.is-active {
   display: flex;
 }
-.modal-overlay.is-active .modal{
+
+.modal-overlay.is-active .modal {
   display: block;
 }
 
@@ -1216,6 +1220,7 @@ a.catalog-menu {
 
 .modal-login form {
   display: inline-block;
+  vertical-align: top;
 }
 
 .modal-login .modal-close {
@@ -1461,9 +1466,9 @@ a.catalog-menu {
 
 .range-fill {
   position: absolute;
-  top: calc(50% - 4px);
-  left: 16px;
-  width: calc(100% - 32px);
+  top: calc(50% - 3px);
+  left: 24px;
+  width: calc(100% - 47px);
   height: 5px;
   /*background-color: #F8F7F4;*/
   background-color: rgba(248, 247, 244, 0.5);
@@ -1487,6 +1492,7 @@ fieldset {
   line-height: 26px;
   color: #ffffff;
   display: inline-block;
+  vertical-align: top;
   text-align: center;
   width: 26px;
   height: 26px;
@@ -1516,7 +1522,6 @@ fieldset {
 .pagination .prev {
   transform: rotate(-180deg);
 }
-
 
 .horizontal-line {
   display: block;
