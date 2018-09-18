@@ -18,7 +18,7 @@
     <ul class="site-navigation">
       <li class="hover-popup">
         <a class="menu-item" href="catalog.html"><span>Каталог</span></a>
-        <ul class="dropdown-menu popup">
+        <ul class="dropdown-menu popup on-left">
           <li><a class="catalog-menu new-products" href="#">Новинки</a></li>
           <li class="separator"></li>
           <li><a class="catalog-menu" href="catalog.html">Сливочное</a></li>
@@ -39,7 +39,7 @@
                   d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/>
           </svg>
         </a>
-        <div class="search-form popup">
+        <div class="search-form popup on-right">
           <form action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="search-form">Поиск по сайту</label>
             <input class="gllacy-input popup-input" type="search" name="search" id="search-form"
@@ -59,7 +59,7 @@
           </svg>
           <span>Вход</span>
         </a>
-        <div class="login-form popup">
+        <div class="login-form popup on-right">
           <form action="https://echo.htmlacademy.ru" method="post">
             <div>
               <label class="visually-hidden" for="login-email">Электронная почта</label>
@@ -327,7 +327,7 @@
 <div class="modal-overlay" id="feedback-window">
   <section class="modal modal-login popup">
     <h2>Мы обязательно вам ответим!</h2>
-    <form action="https://echo.htmlacademy.ru" method="post">
+    <form action="https://echo.htmlacademy.ru" method="post" id="callback-form">
       <label class="visually-hidden" for="callback-name">Как вас зовут?</label>
       <input class="gllacy-input" type="text" name="name" id="callback-name" placeholder="Как вас зовут?">
       <label class="visually-hidden" for="callback-email">Ваша почта для ответа?</label>
@@ -335,7 +335,7 @@
       <label class="visually-hidden" for="callback-comments">Напишите что-нибудь</label>
       <textarea class="gllacy-comments" name="comments" rows="6" id="callback-comments"
                 placeholder="Напишите что-нибудь..."></textarea>
-      <button class="gllacy-button" type="submit">Отправить</button>
+      <button class="gllacy-button" type="submit" id="callback-form-submit">Отправить</button>
     </form>
     <button class="modal-close" id="feedback-close" type="button" aria-label="Закрыть форму"></button>
   </section>

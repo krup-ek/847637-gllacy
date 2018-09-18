@@ -42,5 +42,29 @@ function init() {
   myMap.geoObjects.add(place);
 }
 
+document.getElementById('callback-form-submit').addEventListener('click', checkFormValues);
+function checkFormValues(e) {
+  const inputs = {
+    name: document.getElementById('callback-name'),
+    email: document.getElementById('callback-email'),
+    comments: document.getElementById('callback-comments')
+  };
+
+  let goodValues = true;
+  Object.values(inputs).forEach(input => {
+    if (input.value.length < 1) {
+      input.classList.add('error-on-input');
+      goodValues = false;
+    }
+  });
+
+  if (goodValues) {
+    document.getElementById('callback-form').submit();
+  }
+
+  setTimeout(() => Object.values(inputs).forEach(input => input.classList.remove('error-on-input')), 500);
+
+  e.preventDefault();
+}
 
 
